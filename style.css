@@ -1,0 +1,3449 @@
+/* ---------- Basic Setup ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fa;
+    color: #182230;
+}
+
+
+/* ---------- Navigation ---------- */
+
+nav {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    background: #500000;
+    color: white;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 700;
+    color: #500000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #374151;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #500000;
+}
+.nav-links a.active {
+    color: #500000;
+    font-weight: 700;
+}
+
+/* ---------- Hero Section ---------- */
+
+.hero {
+    min-height: calc(100vh - 85px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 10%;
+    gap: 80px;
+
+    background:
+        radial-gradient(
+            circle at 78% 45%,
+            rgba(80, 0, 0, 0.055) 0%,
+            rgba(80, 0, 0, 0.02) 25%,
+            transparent 52%
+        ),
+        #f6f7f9;
+}
+.hero-text {
+    max-width: 650px;
+    padding-left: 0;
+}
+
+.hero-text > * {
+    margin-left: 0;
+}
+.intro {
+    color: #500000;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 72px;
+    line-height: 0.95;
+    letter-spacing: -3px;
+    margin-bottom: 28px;
+    color: #111827;
+    transform: translateX(-6px);
+}
+
+.hero h2 {
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.university {
+    font-size: 18px;
+    color: #500000;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.fields {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 22px;
+    color: #374151;
+}
+
+.description {
+    max-width: 590px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #1f2937;
+}
+
+
+/* ---------- Buttons ---------- */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.buttons a {
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.primary-button {
+    background: #500000;
+    color: white;
+    border: 2px solid #500000;
+}
+
+.primary-button:hover {
+    background: #730000;
+    border-color: #730000;
+}
+
+.secondary-button {
+    color: #500000;
+    border: 2px solid #500000;
+}
+
+.secondary-button:hover {
+    background: #500000;
+    color: white;
+}
+
+
+/* ---------- Profile Image ---------- */
+
+.hero-image {
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 390px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+/* ---------- About Section ---------- */
+
+.about {
+    background: white;
+    padding: 55px 10%;
+}
+.about-statement {
+    position: relative;
+    padding-left: 28px;
+}
+
+.about-statement::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 4px;
+    height: 120px;
+    background: #500000;
+}
+.section-heading {
+    max-width: 750px;
+    margin-bottom: 35px;
+}
+
+.section-label {
+    color: #500000;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    color: #111827;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 100px;
+}
+
+.about-main p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #1f2937;
+    margin-bottom: 22px;
+}
+
+.about-details {
+    border-left: 2px solid #e5e7eb;
+    padding-left: 40px;
+}
+
+.detail {
+    margin-bottom: 30px;
+}
+
+.detail span {
+    display: block;
+    color: #500000;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 7px;
+}
+
+.detail p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #263244;
+    
+}
+/* ===== INDUSTRIAL RESEARCH FEATURE ===== */
+
+.industry-feature {
+    min-height: 620px;
+    background-image: url("images/industrial-research.jpeg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 70px 10%;
+}
+
+.industry-overlay {
+    width: 52%;
+    max-width: 700px;
+    background: rgba(17, 24, 39, 0.86);
+    padding: 55px 60px;
+    color: white;
+}
+
+.industry-label {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+.industry-overlay h2 {
+    font-size: 25px;
+    line-height: 1.25;
+    margin-bottom: 30px;
+    color: white;
+}
+.industry-overlay {
+    width: 46%;
+    max-width: 620px;
+    background: rgba(17, 24, 39, 0.82);
+    padding: 45px 50px;
+    color: white;
+}
+
+.industry-description {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #f3f4f6;
+}
+/* ===== RESEARCH PAGE HERO ===== */
+
+.research-hero {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.research-hero-visual {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.research-hero-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.research-hero-text {
+    position: relative;
+    z-index: 2;
+    width: 42%;
+    padding: 105px 0 80px 5%;
+}
+
+.research-hero-label {
+    color: #500000;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.research-hero h1 {
+    font-size: 58px;
+    line-height: 1;
+    color: #111827;
+    margin-bottom: 24px;
+}
+
+.research-hero-text > p:last-child {
+    max-width: 460px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #1f2937;
+}
+/* ---------- Separate Page Header ---------- */
+
+.logo a {
+    text-decoration: none;
+    color: #500000;
+}
+
+.page-header {
+    padding: 120px 10% 80px;
+    min-height: 420px;
+    background: #f7f8fa;
+}
+
+.page-header h1 {
+    font-size: 70px;
+    color: #111827;
+    margin: 10px 0 25px;
+}
+
+.page-header > p:last-child {
+    max-width: 650px;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #5b6472;
+}
+/* ==================================================
+   RESEARCH AREAS
+================================================== */
+
+.research-areas {
+    padding: 65px 7% 35px;
+    background: #ffffff;
+}
+
+
+/* Section Heading */
+
+.research-areas-heading {
+    margin-bottom: 34px;
+}
+
+.research-areas-heading h2 {
+    font-size: 40px;
+    line-height: 1.1;
+    color: #111827;
+    margin: 0;
+}
+
+
+/* ==================================================
+   2 x 2 RESEARCH GRID
+================================================== */
+
+.research-focus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid #d7dce2;
+    border-bottom: 1px solid #d7dce2;
+}
+
+
+/* Individual Research Area */
+
+.research-focus-card {
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 55px 65px 48px 0;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+/* Right Column */
+
+.research-focus-card:nth-child(even) {
+    padding-left: 65px;
+
+    border-left: 1px solid #d7dce2;
+}
+
+
+/* Divider Between Top and Bottom Rows */
+
+.research-focus-card:nth-child(1),
+.research-focus-card:nth-child(2) {
+    border-bottom: 1px solid #d7dce2;
+}
+
+
+/* ==================================================
+   MAROON ACCENT
+================================================== */
+
+.research-focus-card::before {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 4px;
+
+    background: #500000;
+
+    margin-bottom: 32px;
+}
+
+
+/* ==================================================
+   LARGE BACKGROUND NUMBERS
+================================================== */
+
+.focus-number {
+    position: absolute;
+
+    top: 25px;
+    right: 45px;
+
+    font-size: 92px;
+    line-height: 1;
+
+    font-weight: 700;
+
+    color: rgba(80, 0, 0, 0.055);
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   RESEARCH AREA TITLES
+================================================== */
+.focus-description {
+    position: relative;
+    z-index: 1;
+    max-width: 570px;
+
+    font-size: 16px;
+    line-height: 1.65;
+    font-weight: 400;
+
+    color: #1f2937;
+
+    margin: 0 0 20px;
+}
+.research-focus-card h3 {
+    position: relative;
+    z-index: 1;
+
+    max-width: 620px;
+
+    font-size: 30px;
+    line-height: 1.18;
+
+    font-weight: 700;
+
+    color: #182230;
+
+    margin: 0 0 28px;
+}
+
+
+/* ==================================================
+   TECHNICAL KEYWORDS
+================================================== */
+
+.focus-keywords {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 600;
+
+    color: #1f2937;
+
+    margin-bottom: 28px;
+}
+
+.focus-keywords span {
+    color: #500000;
+    margin: 0 7px;
+}
+
+/* ==================================================
+   EXPLORE RESEARCH LINK
+================================================== */
+
+.selected-work-link {
+    position: relative;
+    z-index: 1;
+
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+
+    margin-top: auto;
+
+    color: #500000;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.selected-work-link:hover {
+    transform: translateX(5px);
+    opacity: 0.7;
+}
+
+
+/* Smooth Scroll */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ==================================================
+   RESEARCH AREAS RESPONSIVE
+================================================== */
+
+@media screen and (max-width: 900px) {
+
+    .research-areas {
+        padding: 55px 7%;
+    }
+
+    .research-areas-heading {
+        margin-bottom: 28px;
+    }
+
+    .research-areas-heading h2 {
+        font-size: 34px;
+    }
+
+    .research-focus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .research-focus-card,
+    .research-focus-card:nth-child(even) {
+        min-height: 240px;
+
+        padding: 38px 25px 34px 0;
+
+        border-left: none;
+        border-bottom: 1px solid #d7dce2;
+    }
+
+    .research-focus-card:last-child {
+        border-bottom: none;
+    }
+
+    .research-focus-card::before {
+        width: 48px;
+        margin-bottom: 25px;
+    }
+
+    .focus-number {
+        top: 22px;
+        right: 10px;
+
+        font-size: 70px;
+    }
+
+    .research-focus-card h3 {
+        max-width: 80%;
+
+        font-size: 24px;
+
+        margin-bottom: 20px;
+    }
+
+    .focus-keywords {
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+}
+/* Research Expertise */
+
+.research-expertise {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 600;
+    color: #263244;
+}
+
+.research-expertise span {
+    color: #500000;
+    font-weight: 400;
+}
+/* ---------- Selected Projects ---------- */
+
+.projects {
+    padding: 75px 7%;
+    background: #ffffff;
+}
+
+/* Section heading */
+
+.projects-heading {
+    max-width: 720px;
+    margin-bottom: 45px;
+}
+
+.projects-heading h2 {
+    font-size: 40px;
+    line-height: 1.15;
+    color: #111827;
+    margin: 10px 0 15px;
+}
+
+.projects-heading > p:last-child {
+    max-width: 650px;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #5b6472;
+}
+
+
+/* Individual project */
+
+.project {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 55px;
+    align-items: center;
+
+    padding: 45px 0;
+
+    border-top: 1px solid #dfe3e8;
+
+    scroll-margin-top: 110px;
+}
+
+.project:last-child {
+    border-bottom: 1px solid #dfe3e8;
+}
+
+
+/* Alternate image/text position */
+
+.project.reverse {
+    grid-template-columns: 0.8fr 1.2fr;
+}
+
+.project.reverse .project-visual {
+    order: 2;
+}
+
+.project.reverse .project-info {
+    order: 1;
+}
+
+
+/* Project images */
+
+.project-visual {
+    width: 100%;
+    min-height: 390px;
+
+    background: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.project-visual img {
+    width: 100%;
+    height: 390px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* Project information */
+
+.project-info {
+    max-width: 540px;
+}
+
+.project-number {
+    color: #500000;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 12px;
+}
+
+.project-info h3 {
+    font-size: 29px;
+    line-height: 1.2;
+
+    color: #182230;
+
+    margin-bottom: 16px;
+}
+
+.project-info > p:not(.project-number) {
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #5b6472;
+
+    margin-bottom: 20px;
+}
+
+
+/* Technical keywords */
+
+.project-tech {
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1.9;
+
+    color: #263244;
+}
+
+.project-tech span {
+    color: #500000;
+
+    margin: 0 5px;
+}
+
+/* ---------- Research Focus ---------- */
+
+.research-areas {
+    padding: 70px 7% 75px;
+    background: #ffffff;
+}
+
+.research-areas-heading {
+    max-width: 760px;
+    margin-bottom: 42px;
+}
+
+.research-areas-heading .section-label {
+    color: #500000;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.research-areas-heading h2 {
+    font-size: 40px;
+    line-height: 1.15;
+    color: #111827;
+    margin-bottom: 14px;
+}
+
+.research-areas-heading > p:last-child {
+    font-size: 16px;
+    line-height: 1.65;
+    color: #5b6472;
+    max-width: 700px;
+}
+
+
+/* Four research areas */
+
+.research-focus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid #dfe3e8;
+    border-left: 1px solid #dfe3e8;
+}
+
+
+/* Individual area */
+
+.research-focus-card {
+    position: relative;
+
+    min-height: 275px;
+    padding: 34px 38px 32px;
+
+    border-right: 1px solid #dfe3e8;
+    border-bottom: 1px solid #dfe3e8;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: background 0.25s ease;
+}
+
+.research-focus-card:hover {
+    background: #f8f8f8;
+}
+
+
+/* Area number */
+
+.focus-number {
+    display: block;
+
+    color: #500000;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Area title */
+
+.research-focus-card h3 {
+    font-size: 25px;
+    line-height: 1.2;
+
+    color: #182230;
+
+    margin-bottom: 13px;
+}
+
+
+/* Area description */
+
+.research-focus-card > p {
+    max-width: 560px;
+
+    font-size: 15px;
+    line-height: 1.65;
+
+    color: #5b6472;
+
+    margin-bottom: 18px;
+}
+
+
+/* Technical keywords */
+
+.focus-keywords {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.7;
+
+    color: #263244;
+
+    margin-bottom: 25px;
+}
+
+.focus-keywords span {
+    color: #500000;
+    margin: 0 4px;
+}
+
+
+/* Selected work link */
+
+.selected-work-link {
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+
+    margin-top: auto;
+
+    color: #500000;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #500000;
+
+    padding-bottom: 4px;
+
+    transition: gap 0.2s ease, opacity 0.2s ease;
+}
+
+.selected-work-link:hover {
+    opacity: 0.7;
+}
+
+
+/* Smooth project jump */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ---------- Research Focus Responsive ---------- */
+
+@media screen and (max-width: 900px) {
+
+    .research-areas {
+        padding: 55px 7% 60px;
+    }
+
+    .research-areas-heading {
+        margin-bottom: 32px;
+    }
+
+    .research-areas-heading h2 {
+        font-size: 34px;
+    }
+
+    .research-focus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .research-focus-card {
+        min-height: auto;
+        padding: 30px;
+    }
+
+    .research-focus-card h3 {
+        font-size: 23px;
+    }
+}
+/* ---------- Selected Projects Responsive ---------- */
+
+@media screen and (max-width: 900px) {
+
+    .projects {
+        padding: 60px 7%;
+    }
+
+    .projects-heading {
+        margin-bottom: 35px;
+    }
+
+    .project,
+    .project.reverse {
+        grid-template-columns: 1fr;
+        gap: 28px;
+
+        padding: 40px 0;
+    }
+
+    .project.reverse .project-visual,
+    .project.reverse .project-info {
+        order: initial;
+    }
+
+    .project-visual {
+        min-height: auto;
+    }
+
+    .project-visual img {
+        height: auto;
+        max-height: 430px;
+    }
+
+    .project-info {
+        max-width: none;
+    }
+
+    .project-info h3 {
+        font-size: 26px;
+    }
+}
+/* ---------- Publications ---------- */
+
+.publication-section {
+    padding: 40px 10% 120px;
+    background: white;
+}
+
+.pub-number {
+    color: #500000;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transform: translateY(6px);
+}
+
+.publication {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 30px;
+    align-items: start;
+    padding: 38px 0;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+
+.pub-content {
+    max-width: 900px;
+}
+
+.pub-type {
+    color: #500000;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    margin-bottom: 10px;
+}
+
+.pub-content h2 {
+    font-size: 22px;
+    line-height: 1.4;
+    color: #182230;
+    margin-bottom: 12px;
+}
+
+.pub-authors {
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.pub-authors strong {
+    color: #500000;
+}
+
+.pub-content a {
+    color: #500000;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.pub-content a:hover {
+    text-decoration: underline;
+}
+/* ---------- Experience ---------- */
+
+.experience-section {
+    padding: 40px 10% 120px;
+    background: white;
+}
+
+.experience-item {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 65px;
+    padding: 55px 0;
+    border-top: 1px solid #dfe3e8;
+}
+
+.experience-item:last-child {
+    border-bottom: 1px solid #dfe3e8;
+}
+
+.experience-date span {
+    color: #500000;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.experience-content {
+    max-width: 850px;
+}
+
+.experience-content h2 {
+    font-size: 27px;
+    color: #182230;
+    margin-bottom: 7px;
+}
+
+.experience-content h3 {
+    font-size: 17px;
+    color: #500000;
+    margin-bottom: 5px;
+}
+
+.experience-location {
+    font-size: 14px !important;
+    color: #8a919c !important;
+    margin-bottom: 20px !important;
+}
+
+.experience-content > p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #5b6472;
+    margin-bottom: 22px;
+}
+
+.experience-skills {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.9;
+    color: #263244;
+}
+
+.experience-skills span {
+    color: #500000;
+    margin: 0 5px;
+}
+/* ---------- Mobile ---------- */
+/* ---------- Education ---------- */
+
+.education-section {
+    padding: 40px 10% 120px;
+    background: white;
+}
+
+.education-item {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 65px;
+    padding: 55px 0;
+    border-top: 1px solid #dfe3e8;
+}
+
+.education-item:last-child {
+    border-bottom: 1px solid #dfe3e8;
+}
+
+.education-date span {
+    color: #500000;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.education-content {
+    max-width: 850px;
+}
+
+.education-content h2 {
+    font-size: 27px;
+    color: #182230;
+    margin-bottom: 7px;
+}
+
+.education-content h3 {
+    font-size: 17px;
+    color: #500000;
+    margin-bottom: 5px;
+}
+
+.education-location {
+    font-size: 14px !important;
+    color: #8a919c !important;
+    margin-bottom: 20px !important;
+}
+
+.education-content > p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #5b6472;
+    margin-bottom: 22px;
+}
+
+.education-highlight,
+.education-achievements {
+    font-size: 13px;
+    font-weight: 700;
+    color: #263244;
+}
+
+.education-achievements span {
+    color: #500000;
+    margin: 0 7px;
+}
+/* ---------- Contact ---------- */
+
+.contact-section {
+    padding: 40px 10% 120px;
+    background: white;
+}
+
+.contact-intro {
+    max-width: 720px;
+    margin-bottom: 60px;
+}
+
+.contact-intro p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #5b6472;
+}
+
+.contact-links {
+    border-top: 1px solid #dfe3e8;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 0;
+    border-bottom: 1px solid #dfe3e8;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.contact-item span {
+    display: block;
+    color: #500000;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.contact-item h2 {
+    color: #182230;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.contact-arrow {
+    color: #500000;
+    font-size: 28px;
+    transition: 0.2s;
+}
+
+.contact-item:hover h2 {
+    color: #500000;
+}
+
+.contact-item:hover .contact-arrow {
+    transform: translateX(7px);
+}
+/* ---------- Footer ---------- */
+
+.footer {
+    background: rgb(80, 0, 0);
+    color: white;
+    padding: 40px 8% 25px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+    padding-bottom: 35px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.footer-logo {
+    padding-right: 35px;
+    border-right: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.footer-logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+.footer-brand-text h3 {
+    font-size: 25px;
+    margin-bottom: 14px;
+    color: white;
+}
+
+.footer-brand-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #f0e7e7;
+}
+
+.footer-connect {
+    min-width: 390px;
+}
+
+.footer-title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+.footer-links span {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.footer-bottom p {
+    color: #e7dede;
+    font-size: 12px;
+}
+/* ---------- Technical Expertise ---------- */
+
+.technical-expertise {
+    padding: 90px 10% 100px;
+    background: #f7f8fa;
+}
+
+.expertise-heading {
+    margin-bottom: 50px;
+}
+
+.expertise-heading h2 {
+    font-size: 34px;
+    color: #182230;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+}
+
+.expertise-column {
+    border-top: 2px solid #500000;
+    padding-top: 25px;
+}
+
+.expertise-column h3 {
+    font-size: 18px;
+    color: #182230;
+    margin-bottom: 18px;
+}
+
+.expertise-column p {
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 600;
+    color: #5b6472;
+}
+
+.expertise-column span {
+    color: #500000;
+    margin: 0 4px;
+}
+/* ---------- Mobile Navigation ---------- */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #500000;
+    font-size: 28px;
+    cursor: pointer;
+}
+@media (max-width: 1100px) {
+    .technical-expertise {
+    padding: 65px 7%;
+
+
+.expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.expertise-heading h2 {
+    font-size: 28px;
+}
+.footer {
+    padding: 50px 7% 25px;
+}
+    
+.footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 45px;
+    padding-bottom: 40px;
+}
+
+.footer-brand {
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 85px;
+}
+
+.footer-connect {
+    min-width: 0;
+}
+
+.footer-links {
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+    .contact-section {
+    padding: 30px 7% 75px;
+}
+
+.contact-intro {
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    padding: 28px 0;
+}
+
+.contact-item h2 {
+    font-size: 18px;
+}
+    .education-section {
+    padding: 30px 7% 75px;
+}
+
+.education-item {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 40px 0;
+}
+
+.education-content h2 {
+    font-size: 24px;
+}
+    .experience-section {
+    padding: 30px 7% 75px;
+}
+
+.experience-item {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 40px 0;
+}
+
+.experience-content h2 {
+    font-size: 24px;
+}
+    .projects {
+    padding: 75px 7%;
+}
+
+.project {
+    grid-template-columns: 1fr;
+    gap: 35px;
+}
+
+.project.reverse .project-visual,
+.project.reverse .project-info {
+    order: initial;
+}
+
+.project-visual {
+    height: 280px;
+}
+
+.projects-heading h2 {
+    font-size: 34px;
+}
+.research-areas {
+    padding: 20px 7% 75px;
+}
+
+.research-area {
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.research-content h2 {
+    font-size: 26px;
+}
+
+.page-header h1 {
+    font-size: 50px;
+}
+    nav {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+    display: none;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    gap: 0;
+    padding: 15px 7% 25px;
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 1000;
+}
+
+.nav-links.open {
+    display: flex;
+}
+
+.nav-links a {
+    padding: 14px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.menu-toggle {
+    display: block;
+}
+
+    .hero {
+        flex-direction: column-reverse;
+        padding: 50px 7%;
+        text-align: center;
+        gap: 45px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-image img {
+        width: 280px;
+        height: 360px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+    .about {
+    padding: 75px 7%;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+}
+
+.about-content {
+    grid-template-columns: 1fr;
+    gap: 45px;
+}
+
+.about-details {
+    border-left: none;
+    border-top: 2px solid #e5e7eb;
+    padding-left: 0;
+    padding-top: 30px;
+}
+}
+}
+/* ===== MOBILE NAV FIX ===== */
+
+@media screen and (max-width: 1200px) {
+
+    nav {
+        padding: 0 7%;
+        position: relative;
+    }
+
+    .nav-links {
+        display: none !important;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        padding: 15px 7% 25px;
+        border-bottom: 1px solid #e5e7eb;
+        z-index: 1000;
+    }
+
+    .nav-links.open {
+        display: flex !important;
+    }
+
+    .nav-links a {
+        padding: 14px 0;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .menu-toggle {
+        display: block !important;
+        background: none;
+        border: none;
+        color: #500000;
+        font-size: 30px;
+        cursor: pointer;
+        margin-left: auto;
+    }
+}
+/* FINAL RESEARCH AREA TEXT OVERRIDE */
+
+.research-focus-card .focus-description {
+    color: #1f2937 !important;
+    font-size: 17px !important;
+    line-height: 1.65;
+}
+
+.research-focus-card .focus-keywords {
+    color: #1f2937 !important;
+    font-size: 16px !important;
+    font-weight: 600;
+}
+
+.research-focus-card .focus-keywords span {
+    color: #500000 !important;
+}
+/* FINAL SELECTED RESEARCH PROJECT STYLING */
+
+/* Project description */
+.project-info > p:not(.project-number) {
+    font-size: 17px !important;
+    line-height: 1.65;
+    color: #1f2937 !important;
+    margin-bottom: 20px;
+}
+
+/* Project technical terms */
+.project-tech {
+    font-size: 16px !important;
+    line-height: 1.8;
+    font-weight: 600;
+    color: #1f2937 !important;
+}
+
+.project-tech span {
+    color: #500000 !important;
+    margin: 0 7px;
+}
+
+/* Remove white space around project images */
+.project-visual {
+    width: 100%;
+    min-height: 0 !important;
+    background: transparent !important;
+    display: block !important;
+    overflow: hidden;
+}
+
+.project-visual img {
+    width: 100%;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: unset !important;
+    display: block;
+}
+/* =========================================
+   RESEARCH IMAGE LIGHTBOX
+========================================= */
+
+.project-visual img {
+    cursor: zoom-in;
+}
+
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px;
+
+    background: rgba(0, 0, 0, 0.82);
+}
+
+.image-lightbox.open {
+    display: flex;
+}
+
+.image-lightbox img {
+    max-width: 92vw;
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    background: white;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+
+    cursor: default;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 22px;
+    right: 32px;
+
+    border: none;
+    background: none;
+
+    color: white;
+    font-size: 46px;
+    line-height: 1;
+
+    cursor: pointer;
+    z-index: 10000;
+}
+.project-tech .tech-item {
+    color: #1f2937 !important;
+    margin: 0 !important;
+    white-space: nowrap;
+}
+
+.project-tech .tech-item:not(.last) {
+    margin-right: 7px !important;
+}
+
+.project-tech .tech-item:not(.last)::first-letter {
+    color: inherit;
+}
+.project-tech .tech-item {
+    display: inline-block;
+    color: #1f2937 !important;
+    margin: 0 7px 0 0 !important;
+    white-space: nowrap;
+}
+
+.project-tech .tech-item b {
+    color: #500000;
+    margin-left: 7px;
+}
+/* Tighten transition into Selected Research */
+
+.projects {
+    padding-top: 45px !important;
+}
+
+.projects-heading {
+    margin-bottom: 20px !important;
+}
+
+.projects-heading h2 {
+    margin-bottom: 0 !important;
+}
+/* Reduce gap before Selected Research */
+
+.research-areas {
+    padding-bottom: 15px !important;
+}
+
+.projects {
+    padding-top: 25px !important;
+}
+
+.projects-heading {
+    margin-bottom: 20px !important;
+}
+/* Affiliation link */
+
+.affiliation-link {
+    color: #263244;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.affiliation-link:hover {
+    color: #500000;
+    text-decoration: underline;
+}
+/* Maroon navigation header */
+
+nav {
+    background: #500000;
+    border-bottom: none;
+}
+
+.logo,
+.logo a {
+    color: #ffffff !important;
+}
+
+.nav-links a {
+    color: #ffffff;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    opacity: 0.75;
+}
+
+.nav-links a.active {
+    color: #ffffff;
+    font-weight: 700;
+    border-bottom: 2px solid #ffffff;
+}
+/* Publication summary spacing */
+
+.pub-summary-label {
+    color: #500000;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 22px;
+    margin-bottom: 10px;
+}
+
+.pub-summary {
+    line-height: 1.6;
+    margin-top: 0 !important;
+    margin-bottom: 18px;
+}
+/* Compact Publications Header */
+.publications-page .page-header {
+    min-height: 0 !important;
+    padding-top: 30px !important;
+    padding-bottom: 10px !important;
+}
+/* Publications decorative background images */
+
+.publications-page {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.pub-backgrounds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.pub-bg {
+    position: absolute;
+    object-fit: contain;
+    opacity: 0.055;
+    filter: grayscale(35%);
+}
+
+/* Hydrogen pipeline */
+.bg-1 {
+    width: 650px;
+    top: 180px;
+    right: -120px;
+}
+
+/* Molecules */
+.bg-2 {
+    width: 520px;
+    top: 1250px;
+    left: -130px;
+}
+
+/* Electrochemical cell */
+.bg-3 {
+    width: 380px;
+    top: 2450px;
+    right: -60px;
+}
+
+/* Polymer structure */
+.bg-4 {
+    width: 570px;
+    top: 3650px;
+    left: -130px;
+}
+
+/* Autoclave */
+.bg-5 {
+    width: 390px;
+    top: 4900px;
+    right: -60px;
+}
+
+/* Keep website content above background images */
+.publications-page nav,
+.publications-page .page-header,
+.publications-page .publication-section,
+.publications-page footer {
+    position: relative;
+    z-index: 1;
+}
+.publications-page {
+    background: #f7f8fa;
+}
+
+.publications-page .page-header,
+.publications-page .publication-section {
+    background: transparent !important;
+}
+.pub-bg {
+    opacity: 0.15 !important;
+
+    -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        black 35%,
+        rgba(0,0,0,0.7) 55%,
+        transparent 78%
+    );
+
+    mask-image: radial-gradient(
+        ellipse at center,
+        black 35%,
+        rgba(0,0,0,0.7) 55%,
+        transparent 78%
+    );
+}
+/* Compact Experience Header */
+.experience-header {
+    min-height: 0 !important;
+    padding-top: 30px !important;
+    padding-bottom: 7.5px !important;
+}
+
+.experience-header h1 {
+    margin: 0 !important;
+}
+/* Experience Layout */
+
+.experience-item {
+    display: grid !important;
+    grid-template-columns: 0.8fr 1.4fr !important;
+    gap: 80px !important;
+    padding: 55px 0 !important;
+    border-top: 1px solid #d7dce2;
+    align-items: start;
+}
+
+.experience-meta .experience-date {
+    color: #500000 !important;
+    font-size: 13px !important;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    margin: 0 0 18px;
+}
+
+.experience-meta h2 {
+    color: #182230 !important;
+    font-size: 27px !important;
+    line-height: 1.2;
+    margin: 0 0 10px;
+}
+
+.experience-meta h3 {
+    color: #1f2937 !important;
+    font-size: 17px !important;
+    line-height: 1.45;
+    font-weight: 600;
+    margin: 0 0 7px;
+}
+
+.experience-meta .experience-location {
+    color: #667085 !important;
+    font-size: 15px !important;
+    margin: 0;
+}
+
+.experience-details > p {
+    color: #1f2937 !important;
+    font-size: 17px !important;
+    line-height: 1.65;
+    margin: 0 0 22px;
+}
+
+.experience-details .experience-skills {
+    color: #1f2937 !important;
+    font-size: 16px !important;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+.experience-details .experience-skills span {
+    color: #500000 !important;
+    margin: 0 7px;
+}
+.experience-skills {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.experience-skills .skill-item {
+    display: inline-block;
+    white-space: nowrap;
+    color: #1f2937 !important;
+    margin: 0 7px 0 0 !important;
+    padding: 0 !important;
+}
+
+.experience-skills .skill-item b {
+    color: #500000;
+    margin-left: 7px;
+}
+.experience-header {
+    background: #ffffff !important;
+}
+.publications-page .page-header::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: #d7dce2;
+    width: 100%;
+    margin-top: 35px;
+}
+.experience-section {
+    padding-bottom: 45px !important;
+}
+
+.technical-expertise {
+    padding-top: 25px !important;
+}
+
+.expertise-heading {
+    margin-top: 0 !important;
+    margin-bottom: 40px !important;
+}
+.experience-section,
+.technical-expertise {
+    background: #ffffff !important;
+}
+/* Technical Capabilities text colors */
+.technical-expertise .expertise-column h3 {
+    color: #182230 !important;
+}
+
+.technical-expertise .expertise-column p {
+    color: #1f2937 !important;
+}
+/* =========================================
+   EDUCATION PAGE
+   ========================================= */
+
+/* Compact white Education header */
+.education-header {
+    min-height: 0 !important;
+    padding-top: 45px !important;
+    padding-bottom: 25px !important;
+    background: #ffffff !important;
+}
+
+.education-header h1 {
+    margin: 0 !important;
+}
+
+
+/* Education section */
+.education-section {
+    background: #ffffff !important;
+    padding-top: 30px !important;
+    padding-bottom: 60px !important;
+}
+
+
+/* Individual education entry */
+.education-item {
+    display: grid !important;
+    grid-template-columns: 0.8fr 1.4fr !important;
+    gap: 80px !important;
+    align-items: start;
+
+    padding: 55px 0 !important;
+
+    border-top: none !important;
+    border-bottom: 1px solid #d7dce2 !important;
+}
+
+
+/* Date */
+.education-meta .education-date {
+    color: #500000 !important;
+    font-size: 13px !important;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    margin: 0 0 18px;
+}
+
+
+/* Degree */
+.education-meta h2 {
+    color: #182230 !important;
+    font-size: 27px !important;
+    line-height: 1.2;
+    margin: 0 0 10px;
+}
+
+
+/* University */
+.education-meta h3 {
+    color: #1f2937 !important;
+    font-size: 17px !important;
+    line-height: 1.45;
+    font-weight: 600;
+    margin: 0 0 7px;
+}
+
+
+/* Location */
+.education-meta .education-location {
+    color: #1f2937 !important;
+    font-size: 15px !important;
+    margin: 0;
+}
+
+
+/* Research / academic information */
+.education-details > p {
+    color: #1f2937 !important;
+    font-size: 17px !important;
+    line-height: 1.65;
+    margin: 0 0 22px;
+}
+
+
+/* GPA and awards */
+.education-achievements {
+    color: #1f2937 !important;
+    font-size: 16px !important;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+.education-achievements span {
+    color: #500000 !important;
+    margin: 0 7px;
+}
+.education-header::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: #d7dce2;
+    margin-top: 35px;
+    width: 100%;
+}
+/* Tighter Education spacing */
+
+/* Less space after Education divider */
+.education-section {
+    padding-top: 6px !important;
+}
+
+/* Make each degree section shorter */
+.education-item {
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+}
+/* Consistent page titles */
+.experience-header h1,
+.education-header h1,
+.publications-page .page-header h1 {
+    font-family: inherit !important;
+    font-size: 72px !important;
+    font-weight: 700 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -2px !important;
+    color: #111827 !important;
+}
+/* Experience page — consistent dark text */
+.experience-meta h2,
+.experience-meta h3,
+.experience-meta .experience-location,
+.experience-details p,
+.experience-skills {
+    color: #1f2937 !important;
+}
+/* Compact footer - final override */
+.footer {
+    padding: 0 !important;
+}
+
+.footer-main {
+    padding: 45px 8% 35px !important;
+    min-height: 0 !important;
+}
+
+.footer-bottom {
+    padding: 18px 8% !important;
+    margin: 0 !important;
+}
+
+.footer-brand,
+.footer-connect {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+/* Academic Milestones */
+
+.academic-milestones {
+    background: #ffffff;
+    padding: 45px 7% 65px;
+}
+
+.academic-milestones h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    color: #182230;
+    margin: 0 0 30px;
+}
+
+.milestone-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.milestone-photo {
+    height: 280px;
+    overflow: hidden;
+}
+
+.milestone-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.milestone-photo:hover img {
+    transform: scale(1.025);
+}
+/* Tighten Academic Milestones spacing */
+.academic-milestones {
+    padding-top: 5px !important;
+}
+
+.academic-milestones h2 {
+    margin-top: 0 !important;
+    margin-bottom: 28px !important;
+}
+/* Academic milestone captions */
+.milestone-photo {
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.milestone-photo img {
+    width: 100%;
+    height: 280px !important;
+    object-fit: cover;
+}
+
+.milestone-photo p {
+    margin: 12px 0 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1f2937;
+    line-height: 1.4;
+}
+
+.milestone-photo p span {
+    color: #500000;
+    margin: 0 6px;
+}
+/* ==================================================
+   HIGHLIGHTS SLIDESHOW
+================================================== */
+
+.highlights {
+    background: #fff;
+    padding: 35px 7% 70px;
+}
+
+.highlights > h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    color: #182230;
+    margin: 0 0 30px;
+}
+
+.highlight-slider {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    min-height: 430px;
+    border-top: 1px solid #d7dce2;
+    border-bottom: 1px solid #d7dce2;
+}
+
+/* IMAGE */
+
+.highlight-image {
+    height: 430px;
+    overflow: hidden;
+    background: #f3f4f6;
+}
+
+.highlight-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 0.35s ease;
+}
+
+/* RIGHT SIDE */
+
+.highlight-content {
+    min-width: 0;
+    padding: 60px 55px 40px;
+    border-left: 1px solid #d7dce2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.highlight-text {
+    max-width: 500px;
+}
+
+.highlight-content h3 {
+    font-size: 31px;
+    line-height: 1.25;
+    color: #182230;
+    margin: 0 0 18px;
+}
+
+.highlight-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.highlight-content p span {
+    color: #500000;
+    margin: 0 7px;
+}
+
+/* NAVIGATION */
+
+.highlight-navigation {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 35px;
+}
+
+.highlight-navigation button {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #500000;
+    background: transparent;
+    color: #500000;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.highlight-navigation button:hover {
+    background: #500000;
+    color: #fff;
+}
+
+#highlightCounter {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #6b7280;
+    white-space: nowrap;
+}
+
+/* DOTS */
+
+.highlight-dots {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex: 1;
+}
+
+.highlight-dot {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border: none !important;
+    border-radius: 50%;
+    background: #c7cbd1 !important;
+    cursor: pointer;
+}
+
+.highlight-dot.active {
+    background: #500000 !important;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 850px) {
+
+    .highlights {
+        padding: 30px 7% 50px;
+    }
+
+    .highlight-slider {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-image {
+        height: 350px;
+    }
+
+    .highlight-content {
+        min-height: 260px;
+        padding: 35px 30px 30px;
+        border-left: none;
+        border-top: 1px solid #d7dce2;
+    }
+
+    .highlight-content h3 {
+        font-size: 26px;
+    }
+}
+/* Keep highlight photos properly framed */
+.highlight-image img {
+    object-position: center top !important;
+}
+/* Larger Highlights slideshow */
+.highlight-slider {
+    min-height: 600px !important;
+}
+
+.highlight-image {
+    height: 600px !important;
+}
+
+.highlight-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 25% !important;
+}
+
+.highlight-content {
+    min-height: 600px !important;
+}
+/* FINAL Highlights spacing + information */
+
+.highlights {
+    padding-top: 10px !important;
+}
+
+.highlights > h2 {
+    margin-top: 0 !important;
+    margin-bottom: 30px !important;
+}
+
+.highlight-content {
+    justify-content: center !important;
+    padding: 50px 55px !important;
+}
+
+.highlight-content h3 {
+    margin-bottom: 18px !important;
+}
+
+#highlightDescription {
+    max-width: 520px;
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+    font-weight: 400 !important;
+    color: #374151 !important;
+    margin: 0 0 35px !important;
+}
+
+.highlight-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 35px;
+    padding-top: 25px;
+    border-top: 1px solid #d7dce2;
+}
+
+.highlight-details span {
+    display: block;
+    color: #500000;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    margin-bottom: 6px;
+}
+
+.highlight-details p {
+    margin: 0 !important;
+    color: #1f2937 !important;
+    font-size: 15px !important;
+    line-height: 1.45 !important;
+    font-weight: 600 !important;
+}
+/* FINAL Highlights text styling */
+
+.highlight-content {
+    justify-content: center !important;
+}
+
+.highlight-text {
+    max-width: 560px !important;
+}
+
+.highlight-content h3 {
+    font-size: 38px !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+    color: #182230 !important;
+    margin: 0 0 25px !important;
+}
+
+#highlightAffiliation {
+    font-size: 21px !important;
+    line-height: 1.4 !important;
+    font-weight: 700 !important;
+    color: #182230 !important;
+    margin: 0 0 10px !important;
+}
+
+#highlightMeta {
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+    font-weight: 400 !important;
+    color: #182230 !important;
+    margin: 0 !important;
+}
+/* Highlight slideshow arrows */
+
+.highlight-image {
+    position: relative;
+}
+
+.highlight-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.90);
+    border: none;
+    color: #182230;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    opacity: 0;
+    transition: opacity 0.2s ease, background 0.2s ease;
+    z-index: 5;
+}
+
+.highlight-image:hover .highlight-arrow {
+    opacity: 1;
+}
+
+.highlight-prev {
+    left: 18px;
+}
+
+.highlight-next {
+    right: 18px;
+}
+
+.highlight-arrow:hover {
+    background: #ffffff;
+}
+/* ==================================================
+   CONTACT PAGE - FINAL
+================================================== */
+
+.contact-header {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 55px 9% 45px !important;
+    margin: 0 !important;
+    background: #fff !important;
+}
+
+/* Let's Connect */
+.contact-header h1 {
+    font-size: 72px !important;
+    line-height: 1.05 !important;
+    font-weight: 700 !important;
+    letter-spacing: -2px !important;
+    color: #111827 !important;
+    margin: 0 0 28px !important;
+}
+
+/* Description */
+.contact-header p {
+    max-width: 850px !important;
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    color: #1f2937 !important;
+    margin: 0 !important;
+}
+
+/* Short maroon line */
+.contact-header::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #500000;
+    margin-top: 35px;
+}
+/* Reduce gap between Contact intro and links */
+.contact-header {
+    padding-bottom: 20px !important;
+}
+
+.contact-section {
+    padding-top: 20px !important;
+}
+.about-details {
+    border-left: 2px solid #d1d5db;
+}
+/* ==================================================
+   MOBILE NAVIGATION
+================================================== */
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        height: 70px;
+        padding: 0 6% !important;
+        background: #500000 !important;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .logo,
+    .logo a {
+        color: #ffffff !important;
+        font-size: 20px;
+    }
+
+    .menu-toggle {
+        display: block !important;
+        margin-left: auto;
+        padding: 0;
+        background: transparent !important;
+        border: none !important;
+        color: #ffffff !important;
+        font-size: 27px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none !important;
+
+        position: absolute;
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+        padding: 12px 6% 20px;
+
+        background: #500000 !important;
+
+        flex-direction: column;
+        gap: 0;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        border-bottom: none;
+        z-index: 1000;
+    }
+
+    .nav-links.open {
+        display: flex !important;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 14px 0;
+
+        color: #ffffff !important;
+        font-size: 16px;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a.active {
+        color: #ffffff !important;
+        font-weight: 700;
+        border-bottom-color: rgba(255, 255, 255, 0.35);
+    }
+}
+/* ==================================================
+   MOBILE HOMEPAGE HERO
+================================================== */
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        min-height: 0 !important;
+        display: block !important;
+        padding: 65px 8% 55px !important;
+    }
+
+    .hero-content {
+        width: 100% !important;
+        max-width: none !important;
+    }
+
+    /* Name */
+    .hero h1 {
+        font-size: 58px !important;
+        line-height: 0.95 !important;
+        letter-spacing: -2px !important;
+        transform: none !important;
+        margin-bottom: 30px !important;
+    }
+
+    /* Ph.D. Researcher... */
+    .hero-subtitle {
+        font-size: 22px !important;
+        line-height: 1.45 !important;
+        margin-bottom: 28px !important;
+    }
+
+    /* Research keywords */
+    .hero-keywords {
+        font-size: 15px !important;
+        line-height: 1.8 !important;
+        font-weight: 600 !important;
+        margin-bottom: 28px !important;
+    }
+
+    /* Description */
+    .hero-description {
+        font-size: 17px !important;
+        line-height: 1.7 !important;
+        margin-bottom: 30px !important;
+    }
+
+    /* Buttons */
+    .hero-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+    }
+
+    .hero-buttons a {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    /* Portrait */
+    .hero-image {
+        width: 100% !important;
+        margin-top: 45px !important;
+    }
+}
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+/* ==================================================
+   MOBILE HOMEPAGE - BUTTONS + INDUSTRY SECTION
+================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* ---------- HERO BUTTONS ---------- */
+
+    .hero-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .hero-buttons a {
+        display: flex !important;
+        width: 100% !important;
+        min-height: 54px !important;
+        padding: 14px 20px !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        font-size: 16px !important;
+        text-align: center !important;
+    }
+
+
+    /* ---------- INDUSTRIAL RESEARCH IMAGE ---------- */
+
+    .industry-feature {
+        min-height: 560px !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        align-items: flex-end !important;
+        justify-content: stretch !important;
+
+        background-position: center !important;
+    }
+
+    .industry-overlay {
+        width: 100% !important;
+        max-width: none !important;
+
+        padding: 28px 8% 30px !important;
+
+        background: rgba(17, 24, 39, 0.88) !important;
+    }
+
+    .industry-overlay h2 {
+        font-size: 25px !important;
+        line-height: 1.25 !important;
+        margin: 0 0 15px !important;
+    }
+
+    .industry-description {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        margin: 0 !important;
+    }
+}
+/* ==================================================
+   MOBILE FOOTER
+================================================== */
+
+@media screen and (max-width: 768px) {
+
+    .footer-main {
+        padding: 38px 8% 30px !important;
+        display: block !important;
+    }
+
+    .footer-brand {
+        display: block !important;
+    }
+
+    /* TAMU logo */
+    .footer-logo {
+        width: 150px !important;
+        margin: 0 0 28px !important;
+        padding: 0 !important;
+        border: none !important;
+    }
+
+    .footer-logo img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Remove desktop vertical divider */
+    .footer-brand-text {
+        border-left: none !important;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .footer-brand-text h3 {
+        font-size: 25px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .footer-brand-text p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Connect section */
+    .footer-connect {
+        margin-top: 30px !important;
+        padding-top: 24px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+        text-align: left !important;
+    }
+
+    .footer-title {
+        font-size: 11px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .footer-links {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px 10px !important;
+        justify-content: flex-start !important;
+    }
+
+    .footer-links a,
+    .footer-links span {
+        font-size: 14px !important;
+    }
+
+    /* Bottom copyright */
+    .footer-bottom {
+        padding: 20px 8% 24px !important;
+        display: block !important;
+        text-align: left !important;
+    }
+
+    .footer-bottom p {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+        margin: 0 0 5px !important;
+    }
+}
+/* ==================================================
+   MOBILE ABOUT SECTION
+================================================== */
+
+@media screen and (max-width: 768px) {
+
+    .about {
+        padding: 55px 8% !important;
+    }
+
+    .section-heading {
+        margin-bottom: 40px !important;
+    }
+
+    .section-label {
+        font-size: 12px !important;
+        letter-spacing: 3px !important;
+    }
+
+    .section-heading h2 {
+        font-size: 42px !important;
+        line-height: 1.08 !important;
+        letter-spacing: -1px !important;
+    }
+
+    /* Stack text and details */
+    .about-content {
+        display: block !important;
+    }
+
+    /* Main research statement */
+    .about-main {
+        width: 100% !important;
+        max-width: none !important;
+        margin-bottom: 45px !important;
+    }
+
+    .about-statement {
+        width: 100% !important;
+        padding-left: 22px !important;
+    }
+
+    .about-statement p {
+        width: 100% !important;
+        max-width: none !important;
+        font-size: 17px !important;
+        line-height: 1.7 !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Details underneath */
+    .about-details {
+        width: 100% !important;
+        border-left: none !important;
+        border-top: 1px solid #d1d5db !important;
+        padding-left: 0 !important;
+        padding-top: 32px !important;
+    }
+
+    .detail {
+        margin-bottom: 26px !important;
+    }
+
+    .detail span {
+        font-size: 11px !important;
+        letter-spacing: 2px !important;
+        margin-bottom: 7px !important;
+    }
+
+    .detail p {
+        font-size: 16px !important;
+        line-height: 1.45 !important;
+    }
+}
+/* ==================================================
+   MOBILE RESEARCH PAGE
+================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* ---------- RESEARCH HERO ---------- */
+
+    .research-hero {
+        min-height: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        background: #ffffff !important;
+    }
+
+    .research-hero-visual {
+        position: relative !important;
+        inset: auto !important;
+        order: 1 !important;
+        width: 100% !important;
+        height: 270px !important;
+    }
+
+    .research-hero-visual img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    .research-hero-text {
+        position: relative !important;
+        order: 2 !important;
+        width: 100% !important;
+        padding: 35px 8% 40px !important;
+        background: #ffffff !important;
+    }
+
+    .research-hero h1 {
+        font-size: 48px !important;
+        line-height: 1 !important;
+        margin: 0 0 18px !important;
+        color: #111827 !important;
+    }
+
+    .research-hero-text > p:last-child {
+        max-width: none !important;
+        font-size: 17px !important;
+        line-height: 1.6 !important;
+        color: #1f2937 !important;
+        margin: 0 !important;
+    }
+
+
+    /* ---------- RESEARCH AREAS ---------- */
+
+    .research-areas {
+        padding: 20px 8% 30px !important;
+    }
+
+    .research-focus-grid {
+        display: block !important;
+        border-top: 1px solid #d7dce2 !important;
+        border-bottom: 1px solid #d7dce2 !important;
+    }
+
+    .research-focus-card,
+    .research-focus-card:nth-child(even) {
+        min-height: 0 !important;
+        padding: 38px 0 !important;
+        border-left: none !important;
+        border-bottom: 1px solid #d7dce2 !important;
+    }
+
+    .research-focus-card:last-child {
+        border-bottom: none !important;
+    }
+
+    .research-focus-card::before {
+        width: 48px !important;
+        height: 4px !important;
+        margin-bottom: 24px !important;
+    }
+
+    .focus-number {
+        font-size: 62px !important;
+        top: 25px !important;
+        right: 0 !important;
+    }
+
+    .research-focus-card h3 {
+        font-size: 27px !important;
+        line-height: 1.2 !important;
+        margin: 0 0 18px !important;
+    }
+
+    .research-focus-card .focus-description {
+        max-width: none !important;
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 18px !important;
+    }
+
+    .research-focus-card .focus-keywords {
+        max-width: none !important;
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+        margin-bottom: 22px !important;
+    }
+
+    .selected-work-link {
+        font-size: 12px !important;
+        letter-spacing: 1.3px !important;
+    }
+
+
+    /* ---------- SELECTED RESEARCH ---------- */
+
+    .projects {
+        padding: 45px 6% !important;
+    }
+
+    .projects-heading {
+        margin-bottom: 15px !important;
+    }
+
+    .projects-heading h2 {
+        font-size: 38px !important;
+        line-height: 1.1 !important;
+    }
+
+    .project,
+    .project.reverse {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 25px !important;
+        padding: 38px 0 !important;
+    }
+
+    /* Always image first on mobile */
+    .project .project-visual,
+    .project.reverse .project-visual {
+        order: 1 !important;
+        width: 100% !important;
+    }
+
+    .project .project-info,
+    .project.reverse .project-info {
+        order: 2 !important;
+        width: 100% !important;
+        max-width: none !important;
+    }
+
+    .project-visual img {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+    .project-info h3 {
+        font-size: 29px !important;
+        line-height: 1.15 !important;
+        margin-bottom: 16px !important;
+    }
+
+    .project-info > p:not(.project-number) {
+        font-size: 16px !important;
+        line-height: 1.65 !important;
+    }
+
+    .project-tech {
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+    }
+}
+/* =========================================
+   FINAL MOBILE NAVIGATION FIX
+========================================= */
+
+@media screen and (max-width: 1200px) {
+
+    nav {
+        position: relative !important;
+        z-index: 9999 !important;
+    }
+
+    .menu-toggle {
+        position: relative !important;
+        z-index: 10001 !important;
+        color: white !important;
+        border-color: white !important;
+    }
+
+    .nav-links {
+        display: none !important;
+
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        padding: 28px 5% 32px !important;
+
+        background: #500000 !important;
+
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0 !important;
+
+        z-index: 10000 !important;
+    }
+
+    .nav-links.open {
+        display: flex !important;
+    }
+
+    .nav-links a {
+        display: block !important;
+        width: 100% !important;
+
+        padding: 16px 0 !important;
+
+        color: white !important;
+        font-size: 18px !important;
+        font-weight: 400 !important;
+        text-decoration: none !important;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+    }
+
+    .nav-links a.active {
+        color: white !important;
+        font-weight: 700 !important;
+        border-bottom: 2px solid white !important;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none !important;
+    }
+}
+/* FINAL FIX — Experience skill text */
+.experience-item .experience-details .experience-skills .skill-item {
+    color: #1f2937 !important;
+}
+
+.experience-item .experience-details .experience-skills .skill-item b {
+    color: #500000 !important;
+}
+/* =========================================
+   EDUCATION HIGHLIGHTS — MOBILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .highlights {
+        padding: 30px 4% 45px !important;
+    }
+
+    .highlights h2 {
+        font-size: 38px !important;
+        margin-bottom: 25px !important;
+    }
+
+    .highlight-slider {
+        display: block !important;
+    }
+
+    .highlight-image {
+        width: 100% !important;
+        height: 430px !important;
+        min-height: 0 !important;
+    }
+
+    .highlight-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    .highlight-content {
+        width: 100% !important;
+        min-height: 0 !important;
+        padding: 30px 10px 35px !important;
+        border-left: none !important;
+    }
+
+    .highlight-content h3 {
+        font-size: 30px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 18px !important;
+    }
+
+    .highlight-content p {
+        font-size: 17px !important;
+        line-height: 1.5 !important;
+    }
+
+    .highlight-arrow {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+.about .section-label {
+    margin-left: 2px;
+}
+/* =========================================
+   BACK TO TOP
+========================================= */
+
+#backToTop {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #500000;
+    color: #ffffff;
+    border: 1px solid #500000;
+
+    font-size: 24px;
+    line-height: 1;
+
+    cursor: pointer;
+    z-index: 99999;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition: opacity 0.25s ease,
+                visibility 0.25s ease,
+                transform 0.25s ease,
+                background 0.2s ease,
+                color 0.2s ease;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    background: #ffffff;
+    color: #500000;
+}
+
+@media screen and (max-width: 768px) {
+    #backToTop {
+        right: 18px;
+        bottom: 18px;
+        width: 44px;
+        height: 44px;
+        font-size: 21px;
+    }
+}
